@@ -1,0 +1,20 @@
+header {
+  background-color: var(--mainDark);
+  padding: 4vw 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  border-bottom: 0.5rem double var(--mainLight);
+}
+header h1 {
+  font-size: var(--h1FontSize);
+}
+.links a {
+  font-size: var(--bodyFont);
+  text-decoration: none;
+}
+.links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2vw;
+}
