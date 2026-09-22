@@ -9,8 +9,22 @@
   --mainLight: #22396f;
   --mainFont: #fcf1d0;
   --h1FontSize: clamp(2.25rem, 1.3rem + 4vw, 4.5rem);
-  --bodyFont: clamp(1rem, 0.8964rem + 0.442vw, 1.25rem);
+  --bodyFont: clamp(1rem, 0.8964rem + 0.442vw, 1.6rem);
+  --h2Font: clamp(1.75rem, 1.232rem + 2.2099vw, 3rem);
 }
 body {
   background-color: var(--background, grey);
+  font-size: var(--bodyFont);
+}
+.mainWrapper {
+  margin: 10vw 6vw;
+  font-size: var(--bodyFont);
+}
+input,
+label {
+  font-size: var(--bodyFont);
+}
+input {
+  outline: none;
+  border: none;
 }

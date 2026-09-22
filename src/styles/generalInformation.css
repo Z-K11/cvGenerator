@@ -1,0 +1,23 @@
+.generalInput h2 {
+  font-size: var(--h2Font);
+  text-align: center;
+  font-weight: normal;
+}
+.generalInput {
+  border: 0.1rem solid var(--mainFont);
+  padding: 3vw;
+  border-radius: 1rem;
+  background-color: var(--mainDark);
+}
+.generalInput input {
+  background-color: var(--mainLight);
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+}
+.inputAlign {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.8rem 5rem;
+  padding: 0.8rem 0;
+}

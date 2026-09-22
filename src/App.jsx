@@ -1,4 +1,5 @@
 import './styles/App.css';
+import GeneralInformation from './generalInformation';
 function Header() {
   return (
     <header>
@@ -25,5 +26,14 @@ function Link() {
   );
 }
 export default function App() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <div className="mainWrapper">
+        <form action="" method="post">
+          <GeneralInformation />
+        </form>
+      </div>
+    </>
+  );
 }
