@@ -1,5 +1,5 @@
 import './styles/App.css';
-import InputForm from './userInput';
+import Runner from './runner';
 function Header() {
   return (
     <header>
@@ -29,9 +29,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <div className="mainWrapper">
-        <InputForm />
-      </div>
+      <Runner />
     </>
   );
 }

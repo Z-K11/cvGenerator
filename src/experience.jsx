@@ -16,6 +16,9 @@ export default function Experience() {
         <label htmlFor="toDate">To:</label>
         <input type="date" name="toDate" id="toDate" />
       </div>
+      <div className="addExperience">
+        <button type="button">Add</button>
+      </div>
     </div>
   );
 }
