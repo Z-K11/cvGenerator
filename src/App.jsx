@@ -1,7 +1,5 @@
 import './styles/App.css';
-import GeneralInformation from './generalInformation';
-import UserEducation from './educationInput';
-import Experience from './experience';
+import InputForm from './userInput';
 function Header() {
   return (
     <header>
@@ -32,11 +30,7 @@ export default function App() {
     <>
       <Header />
       <div className="mainWrapper">
-        <form action="" method="post">
-          <GeneralInformation />
-          <UserEducation />
-          <Experience />
-        </form>
+        <InputForm />
       </div>
     </>
   );
