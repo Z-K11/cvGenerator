@@ -21,10 +21,13 @@ body {
   font-size: var(--bodyFont);
 }
 input,
-label {
+label,
+select,
+option {
   font-size: var(--bodyFont);
 }
-input {
+input,
+select {
   outline: none;
   border: none;
   width: 100%;

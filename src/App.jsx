@@ -1,6 +1,7 @@
 import './styles/App.css';
 import GeneralInformation from './generalInformation';
 import UserEducation from './educationInput';
+import Experience from './experience';
 function Header() {
   return (
     <header>
@@ -34,6 +35,7 @@ export default function App() {
         <form action="" method="post">
           <GeneralInformation />
           <UserEducation />
+          <Experience />
         </form>
       </div>
     </>

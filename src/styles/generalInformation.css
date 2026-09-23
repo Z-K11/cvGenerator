@@ -9,7 +9,8 @@
   border-radius: 1rem;
   background-color: var(--mainDark);
 }
-.generalInput input {
+.generalInput input,
+.generalInput select {
   background-color: var(--mainLight);
   padding: 0.1rem 0.4rem;
   border-radius: 0.3rem;
