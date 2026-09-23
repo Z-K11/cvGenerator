@@ -1,0 +1,13 @@
+.addEducation button {
+  font-size: var(--bodyFont);
+  background-color: var(--mainFont);
+  padding: 0.2rem 2.4vw;
+  color: var(--mainLight);
+  border: 0.3rem solid var(--mainLight);
+  border-radius: 0.8rem;
+}
+.addEducation {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.4rem 2rem;
+}

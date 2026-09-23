@@ -1,5 +1,6 @@
 import './styles/App.css';
 import GeneralInformation from './generalInformation';
+import UserEducation from './educationInput';
 function Header() {
   return (
     <header>
@@ -32,6 +33,7 @@ export default function App() {
       <div className="mainWrapper">
         <form action="" method="post">
           <GeneralInformation />
+          <UserEducation />
         </form>
       </div>
     </>

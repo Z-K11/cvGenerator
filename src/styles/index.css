@@ -17,7 +17,7 @@ body {
   font-size: var(--bodyFont);
 }
 .mainWrapper {
-  margin: 10vw 6vw;
+  margin: 6vw 4vw;
   font-size: var(--bodyFont);
 }
 input,
@@ -27,4 +27,13 @@ label {
 input {
   outline: none;
   border: none;
+  width: 100%;
+}
+form {
+  background-color: var(--mainLight);
+  padding: 3vw 2.4vw;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
 }
