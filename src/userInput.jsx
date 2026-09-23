@@ -1,6 +1,7 @@
 import GeneralInformation from './generalInformation';
 import UserEducation from './educationInput';
 import Experience from './experience';
+import './styles/userInput.css';
 
 export default function InputForm() {
   return (
@@ -9,6 +10,7 @@ export default function InputForm() {
         <GeneralInformation />
         <UserEducation />
         <Experience />
+        <button type="submit">Submit</button>
       </form>
     </>
   );
