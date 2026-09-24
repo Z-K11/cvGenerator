@@ -30,6 +30,22 @@ export default function GeneralInformation(props) {
             onChange={props.infoChange}
           />
         </div>
+        <div className="personalButtons">
+          <button
+            type="button"
+            id="editPersonalInfo"
+            className="generalButtons"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            id="submitPersonalInfo"
+            className="generalButtons"
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </>
   );

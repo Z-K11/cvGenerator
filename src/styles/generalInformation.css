@@ -22,3 +22,19 @@
   gap: 0.8rem 5rem;
   padding: 0.8rem 0;
 }
+button.generalButtons {
+  font-size: var(--bodyFont);
+  background-color: var(--mainFont);
+  color: var(--mainDark);
+  padding: 0.2rem 2.4vw;
+  border: 0.3rem solid var(--mainLight);
+  border-radius: 0.8rem;
+}
+.personalButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: max-content;
+  margin-left: auto;
+  padding: 0.4rem 2rem;
+}
