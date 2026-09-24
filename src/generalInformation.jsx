@@ -1,18 +1,34 @@
 import './styles/generalInformation.css';
-export default function GeneralInformation() {
+export default function GeneralInformation(props) {
   return (
     <>
       <div className="generalInput">
         <h2>Personal Information</h2>
         <div className="inputAlign">
-          <label htmlFor="firstName">First Name:</label>
-          <input type="text" id="firstName" name="firstName" />
-          <label htmlFor="lastName">Last Name:</label>
-          <input type="text" id="lastName" name="lastName" />
+          <label htmlFor="fullName">Name:</label>
+          <input
+            type="text"
+            id="fullName"
+            name="name"
+            value={props.data.name}
+            onChange={props.infoChange}
+          />
           <label htmlFor="cellNumber">Phone Number:</label>
-          <input type="tel" id="cellNumber" name="cellNumber" />
+          <input
+            type="tel"
+            id="cellNumber"
+            name="number"
+            value={props.data.number}
+            onChange={props.infoChange}
+          />
           <label htmlFor="email">Email Address:</label>
-          <input type="email" id="email" name="email" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={props.data.email}
+            onChange={props.infoChange}
+          />
         </div>
       </div>
     </>
