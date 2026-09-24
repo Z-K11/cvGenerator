@@ -6,7 +6,7 @@ import './styles/userInput.css';
 export default function InputForm(props) {
   return (
     <>
-      <form action="" method="post" id="userInputForm">
+      <form onSubmit={props.submit} id="userInputForm">
         <GeneralInformation data={props.data} infoChange={props.infoChange} />
         <UserEducation
           data={props.educationData}

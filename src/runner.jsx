@@ -14,7 +14,8 @@ export default function Runner() {
     acquired: '',
   });
 
-  function showCv() {
+  function showCv(e) {
+    e.preventDefault();
     setShowResume(true);
   }
   function handlePersonalInformation(e) {
