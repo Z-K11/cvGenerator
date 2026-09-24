@@ -8,7 +8,10 @@ export default function InputForm(props) {
     <>
       <form action="" method="post" id="userInputForm">
         <GeneralInformation data={props.data} infoChange={props.infoChange} />
-        <UserEducation />
+        <UserEducation
+          data={props.educationData}
+          educationInput={props.educationInput}
+        />
         <Experience />
         <button type="submit">Submit</button>
       </form>
