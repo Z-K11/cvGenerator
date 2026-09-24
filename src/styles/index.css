@@ -11,6 +11,7 @@
   --h1FontSize: clamp(2.25rem, 1.3rem + 4vw, 4.5rem);
   --bodyFont: clamp(1rem, 0.8964rem + 0.442vw, 1.6rem);
   --h2Font: clamp(1.75rem, 1.232rem + 2.2099vw, 3rem);
+  --h3Font: clamp(1.25rem, 0.9333rem + 1.3333vw, 2rem);
 }
 body {
   background-color: var(--background, grey);

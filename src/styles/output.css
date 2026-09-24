@@ -1,0 +1,21 @@
+.personalUserData h3 {
+  font-size: var(--h3Font);
+  font-weight: 500;
+}
+.resume {
+  background-color: var(--mainFont);
+  margin: 3rem 0;
+  padding: 3vw 2.4vw;
+  border: 0.3rem double var(--mainLight);
+  border-radius: 1rem;
+}
+.personalUserData {
+  color: var(--mainDark);
+}
+.personalUserData * {
+  color: inherit;
+  padding: 0.1rem 0;
+}
+.personalUserData p {
+  font-size: var(--bodyFont);
+}
