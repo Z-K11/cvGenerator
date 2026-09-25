@@ -33,6 +33,7 @@ export default function Runner() {
         infoChange={handlePersonalInformation}
         submit={showCv}
         educationHandlers={{ add: addEducation }}
+        education={educationList}
       />
       <GeneratedResume user={personalInfo} showOutput={showResume} />
     </div>
