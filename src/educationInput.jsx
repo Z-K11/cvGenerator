@@ -13,7 +13,13 @@ export default function UserEducation(props) {
     const targetId = e.target.id;
     if (targetId === 'addEducation') {
       props.actions.add(education);
+      setEducation({ school: '', certificate: '', acquired: '' });
     }
+  }
+  function removeEntry(e) {
+    const target = e.target.id;
+    console.log(target);
+    props.actions.remove(target);
   }
   return (
     <>
@@ -50,11 +56,11 @@ export default function UserEducation(props) {
             Add
           </button>
         </div>
-        <div className="showCurrentEducation">
+        <div className="showCurrentEducation" onClick={removeEntry}>
           <ul>
             {props.list.map((listObject) => {
               return (
-                <li key={listObject.certificate}>
+                <li key={listObject.certificate + 'input'}>
                   <div className="listFlex">
                     <p>{listObject.school}</p>
                     <p>{listObject.certificate}</p>

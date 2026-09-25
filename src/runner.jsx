@@ -8,7 +8,7 @@ export default function Runner() {
     email: '',
     number: '',
   });
-  const [educationList, sedEducationList] = useState([]);
+  const [educationList, setEducationList] = useState([]);
   function showCv(e) {
     e.preventDefault();
     setShowResume(true);
@@ -17,7 +17,7 @@ export default function Runner() {
     setPersonalInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
   function addEducation(data) {
-    sedEducationList([
+    setEducationList([
       ...educationList,
       {
         school: data.school,
@@ -26,13 +26,16 @@ export default function Runner() {
       },
     ]);
   }
+  function removeEducation(cert) {
+    setEducationList(educationList.filter((item) => item.certificate !== cert));
+  }
   return (
     <div className="mainWrapper">
       <InputForm
         data={personalInfo}
         infoChange={handlePersonalInformation}
         submit={showCv}
-        educationHandlers={{ add: addEducation }}
+        educationHandlers={{ add: addEducation, remove: removeEducation }}
         education={educationList}
       />
       <GeneratedResume user={personalInfo} showOutput={showResume} />
