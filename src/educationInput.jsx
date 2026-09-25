@@ -60,7 +60,7 @@ export default function UserEducation(props) {
             {props.list.map((listObject) => {
               return (
                 <li key={listObject.certificate + 'input'}>
-                  <div className="listFlex">
+                  <div className="educationGrid">
                     <p>{listObject.school}</p>
                     <p>{listObject.certificate}</p>
                     <p>{listObject.acquired}</p>
