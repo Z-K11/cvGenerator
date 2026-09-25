@@ -1,5 +1,14 @@
 import './styles/educationInput.css';
-export default function UserEducation(props) {
+import { useState } from 'react';
+export default function UserEducation() {
+  const [education, setEducation] = useState({
+    school: '',
+    certificate: '',
+    acquired: '',
+  });
+  function handleEducation(e) {
+    setEducation((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
   return (
     <div className="educationInput generalInput">
       <h2>Education</h2>
@@ -9,24 +18,24 @@ export default function UserEducation(props) {
           type="text"
           name="school"
           id="institute"
-          value={props.data.school}
-          onChange={props.educationInput}
+          value={education.school}
+          onChange={handleEducation}
         />
         <label htmlFor="certificate">Certificate Name:</label>
         <input
           type="text"
           name="certificate"
           id="certificate"
-          value={props.data.certificate}
-          onChange={props.educationInput}
+          value={education.certificate}
+          onChange={handleEducation}
         />
         <label htmlFor="certificateDate">Date Acquired:</label>
         <input
           type="date"
           name="acquired"
           id="certificateDate"
-          value={props.data.acquired}
-          onChange={props.educationInput}
+          value={education.acquired}
+          onChange={handleEducation}
         />
       </div>
       <div className="addEducation">
