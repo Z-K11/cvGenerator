@@ -8,7 +8,7 @@ export default function Runner() {
     email: '',
     number: '',
   });
-
+  const [educationList, sedEducationList] = useState([]);
   function showCv(e) {
     e.preventDefault();
     setShowResume(true);
@@ -16,13 +16,23 @@ export default function Runner() {
   function handlePersonalInformation(e) {
     setPersonalInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
-
+  function addEducation(data) {
+    sedEducationList([
+      ...educationList,
+      {
+        school: data.school,
+        certificate: data.certificate,
+        acquired: data.acquired,
+      },
+    ]);
+  }
   return (
     <div className="mainWrapper">
       <InputForm
         data={personalInfo}
         infoChange={handlePersonalInformation}
         submit={showCv}
+        educationHandlers={{ add: addEducation }}
       />
       <GeneratedResume user={personalInfo} showOutput={showResume} />
     </div>
