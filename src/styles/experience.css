@@ -1,0 +1,15 @@
+.listGrid {
+  padding: 1vw 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 2fr)) 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.listGrid button {
+  border-radius: 0.3rem;
+  border: 0.1rem solid white;
+  padding: 0.1rem 1vw;
+  font-size: var(--bodyFont);
+  width: fit-content;
+}

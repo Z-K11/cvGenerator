@@ -9,6 +9,7 @@ export default function Runner() {
     number: '',
   });
   const [educationList, setEducationList] = useState([]);
+  const [experienceList, setExperienceList] = useState([]);
   function showCv(e) {
     e.preventDefault();
     setShowResume(true);
@@ -29,6 +30,22 @@ export default function Runner() {
   function removeEducation(cert) {
     setEducationList(educationList.filter((item) => item.certificate !== cert));
   }
+  function addExperience(data) {
+    setExperienceList([
+      ...experienceList,
+      {
+        company: data.company,
+        experience: data.experience,
+        from: data.from,
+        to: data.to,
+      },
+    ]);
+  }
+  function removeExperience(check) {
+    setExperienceList(
+      experienceList.filter((item) => item.company + item.experience !== check)
+    );
+  }
   return (
     <div className="mainWrapper">
       <InputForm
@@ -37,6 +54,8 @@ export default function Runner() {
         submit={showCv}
         educationHandlers={{ add: addEducation, remove: removeEducation }}
         education={educationList}
+        experience={experienceList}
+        experienceHandlers={{ add: addExperience, remove: removeExperience }}
       />
       <GeneratedResume user={personalInfo} showOutput={showResume} />
     </div>

@@ -12,7 +12,10 @@ export default function InputForm(props) {
           actions={props.educationHandlers}
           list={props.education}
         />
-        <Experience />
+        <Experience
+          list={props.experience}
+          actions={props.experienceHandlers}
+        />
         <button type="submit">Submit</button>
       </form>
     </>

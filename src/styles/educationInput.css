@@ -14,7 +14,8 @@
   padding: 0.4rem 1rem;
 }
 .showCurrentEducation li,
-li p {
+li p,
+.showCurrentExperience li {
   font-size: var(--bodyFont);
   overflow-wrap: break-word;
 }

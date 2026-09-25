@@ -1,15 +1,31 @@
 import { useState } from 'react';
-export default function Experience() {
+import './styles/experience.css';
+export default function Experience(props) {
   const [jobData, setJobData] = useState({
     company: '',
-    experience: '',
+    experience: 'job',
     from: '',
     to: '',
   });
   function handleInput(e) {
     const { name, value } = e.target;
     setJobData((prev) => ({ ...prev, [name]: value }));
-    console.log(`Changed ${name}`);
+  }
+  function addExperience(e) {
+    const target = e.target.id;
+    if (target === 'addExperience') {
+      props.actions.add(jobData);
+      setJobData({
+        company: '',
+        experience: 'job',
+        from: '',
+        to: '',
+      });
+    }
+  }
+  function removeExperience(e) {
+    const target = e.target.id;
+    props.actions.remove(target);
   }
   return (
     <div className="experienceInput generalInput">
@@ -52,7 +68,31 @@ export default function Experience() {
         />
       </div>
       <div className="addExperience">
-        <button type="button">Add</button>
+        <button type="button" onClick={addExperience} id="addExperience">
+          Add
+        </button>
+      </div>
+      <div className="showCurrentExperience" onClick={removeExperience}>
+        <ul>
+          {props.list.map((item) => {
+            return (
+              <li
+                key={item.company + item.experience}
+                className="experienceList"
+              >
+                <div className="listGrid">
+                  <p>{item.company}</p>
+                  <p>{item.experience}</p>
+                  <p>{item.from}</p>
+                  <p>{item.to}</p>
+                  <button type="button" id={item.company + item.experience}>
+                    remove
+                  </button>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

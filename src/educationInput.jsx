@@ -18,7 +18,6 @@ export default function UserEducation(props) {
   }
   function removeEntry(e) {
     const target = e.target.id;
-    console.log(target);
     props.actions.remove(target);
   }
   return (
