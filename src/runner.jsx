@@ -61,6 +61,7 @@ export default function Runner() {
         user={personalInfo}
         showOutput={showResume}
         userEducation={educationList}
+        userExperience={experienceList}
       />
     </div>
   );
