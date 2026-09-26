@@ -12,7 +12,8 @@
 .personalUserData,
 .educationWrapper p,
 li,
-h2,
+.userEducation h2,
+.userExperience h2,
 .experienceWrapper p {
   color: var(--mainDark);
 }
