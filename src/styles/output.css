@@ -9,13 +9,31 @@
   border: 0.3rem double var(--mainLight);
   border-radius: 1rem;
 }
-.personalUserData {
+.personalUserData,
+.educationWrapper p,
+li,
+h2 {
   color: var(--mainDark);
 }
 .personalUserData * {
   color: inherit;
   padding: 0.1rem 0;
 }
-.personalUserData p {
+.personalUserData p,
+li {
   font-size: var(--bodyFont);
+  padding: 0.2rem 0;
+}
+.educationWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 2fr)) 1fr;
+  gap: 1rem;
+}
+.userEducation {
+  padding: 2.4vw 2.4vw;
+  margin: 2rem 0;
+}
+.userEducation h2 {
+  font-size: var(--h2Font);
+  margin: 0 0 1.6rem -2.4vw;
 }

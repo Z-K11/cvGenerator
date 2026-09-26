@@ -10,6 +10,22 @@ export default function GeneratedResume(props) {
         <p>{props.user.number}</p>
         <p>{props.user.email}</p>
       </div>
+      <div className="userEducation">
+        <h2>Education :</h2>
+        <ol>
+          {props.userEducation.map((content) => {
+            return (
+              <li key={content.certificate}>
+                <div className="educationWrapper">
+                  <p>{content.school}</p>
+                  <p>{content.certificate}</p>
+                  <p>{content.acquired}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </div>
   );
 }

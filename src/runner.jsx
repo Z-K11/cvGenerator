@@ -57,7 +57,11 @@ export default function Runner() {
         experience={experienceList}
         experienceHandlers={{ add: addExperience, remove: removeExperience }}
       />
-      <GeneratedResume user={personalInfo} showOutput={showResume} />
+      <GeneratedResume
+        user={personalInfo}
+        showOutput={showResume}
+        userEducation={educationList}
+      />
     </div>
   );
 }
