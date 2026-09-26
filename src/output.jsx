@@ -15,7 +15,7 @@ export default function GeneratedResume(props) {
         <div className="educationWrapper">
           <p>Institute :</p>
           <p>Certificate :</p>
-          <p>Date Acquired :</p>
+          <p>Obtained :</p>
         </div>
         <ol>
           {props.userEducation.map((content) => {

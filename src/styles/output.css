@@ -50,3 +50,7 @@ li {
 .experienceWrapper p {
   font-size: var(--bodyFont);
 }
+.userExperience ol,
+.userEducation ol {
+  padding: 1rem 0;
+}
